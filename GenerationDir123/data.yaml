@@ -1,0 +1,34 @@
+data:
+  train: /train  # Path to training images
+  val: /validate      # Path to validation images
+  # test: /test    # Path to test images (optional)
+  nc: 9                        # Number of classes
+  names:                        # Class names
+    - 0
+    - 1
+    - 2
+    - 3
+    - 4
+    - 5
+    - 6
+    - 7
+    - 8
+
+# Logging
+logging:
+  project: yolov8_training     # Project name
+  name: experiment_1           # Experiment name
+  save_period: 10              # Save checkpoint every N epochs
+  save_dir: /save_dir  # Directory to save checkpoints and logs
+
+# Hardware
+device: 0                      # GPU device number (0 for first GPU, 'cpu' for CPU)
+
+# Evaluation
+evaluation:
+  save_best: true              # Save the best model based on validation metrics
+  save_last: true              # Save the last model checkpoint
+
+# Dataloaders
+dataloaders:
+  workers: 8                   # Number of worker threads for data loading
